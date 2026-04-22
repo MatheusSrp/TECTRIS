@@ -253,12 +253,12 @@ Clique no titulo da funcionalidade para acessar o diagrama correspondente comple
 
 | Funcionalidade | Diagrama | Funcionalidade | Diagrama | Funcionalidade | Diagrama |
 |---------------|----------|----------------|----------|----------------|----------|
-| **[1. Jogar partida local](./docs/README.md#1-jogar-partida-local)** | ![Diagrama 1](URL_DA_IMAGEM) | **2. Sistema de queda de blocos** | ![Diagrama 2](URL_DA_IMAGEM) | **3. Perguntas de lógica durante o jogo** | ![Diagrama 3](URL_DA_IMAGEM) |
-| **4. Sistema de pontuação** | ![Diagrama 4](URL_DA_IMAGEM) | **5. Penalidade por erro** | ![Diagrama 5](URL_DA_IMAGEM) | **6. Sistema de vitória** | ![Diagrama 6](URL_DA_IMAGEM) |
-| **7. Sistema de tempo nas perguntas** | ![Diagrama 7](URL_DA_IMAGEM) | **8. Efeito competitivo (impactar adversário)** | ![Diagrama 8](URL_DA_IMAGEM) | **9. Interface do jogo (UI básica)** | ![Diagrama 9](URL_DA_IMAGEM) |
-| **10. Banco de perguntas (fixo/local)** | ![Diagrama 10](URL_DA_IMAGEM) | **11. Aumento de dificuldade progressiva** | ![Diagrama 11](URL_DA_IMAGEM) | **12. Feedback visual (acerto/erro)** | ![Diagrama 12](URL_DA_IMAGEM) |
-| **13. Sorteio do número secreto** | ![Diagrama 13](URL_DA_IMAGEM) | **14. Loop de adivinhação** | ![Diagrama 14](URL_DA_IMAGEM) | **15. Validação da entrada** | ![Diagrama 15](URL_DA_IMAGEM) |
-| **16. Feedback: "Muito baixo"** | ![Diagrama 16](URL_DA_IMAGEM) | **17. Feedback: "Muito alto"** | ![Diagrama 17](URL_DA_IMAGEM) | **18. Feedback: "Acertou"** | ![Diagrama 18](URL_DA_IMAGEM) | 
+| **[1. Jogar partida local](./docs/README.md#1-jogar-partida-local)** | ![Diagrama 1](URL_DA_IMAGEM) | **[2. Sistema de queda de blocos](./docs/README.md#2-sistema-de-queda-de-blocos)** | ![Diagrama 2](URL_DA_IMAGEM) | **[3. Perguntas de lógica durante o jogo](./docs/README.md#3-perguntas-de-lógica-durante-o-jogo)** | ![Diagrama 3](URL_DA_IMAGEM) |
+| **[4. Sistema de pontuação](./docs/README.md#4-sistema-de-pontuação)** | ![Diagrama 4](URL_DA_IMAGEM) | **[5. Penalidade por erro](./docs/README.md#5-penalidade-por-erro)** | ![Diagrama 5](URL_DA_IMAGEM) | **[6. Sistema de vitória](./docs/README.md#6-sistema-de-vitória)** | ![Diagrama 6](URL_DA_IMAGEM) |
+| **[7. Sistema de tempo nas perguntas](./docs/README.md#7-sistema-de-tempo-nas-perguntas)** | ![Diagrama 7](URL_DA_IMAGEM) | **[8. Efeito competitivo (impactar adversário)](./docs/README.md#8-efeito-competitivo-impactar-adversário)** | ![Diagrama 8](URL_DA_IMAGEM) | **[9. Interface do jogo (UI básica)](./docs/README.md#9-interface-do-jogo-ui-básica)** | ![Diagrama 9](URL_DA_IMAGEM) |
+| **[10. Banco de perguntas (fixo/local)](./docs/README.md#10-banco-de-perguntas-fixo-local)** | ![Diagrama 10](URL_DA_IMAGEM) | **[11. Aumento de dificuldade progressiva](./docs/README.md#11-aumento-de-dificuldade-progressiva)** | ![Diagrama 11](URL_DA_IMAGEM) | **[12. Feedback visual (acerto/erro)](./docs/README.md#12-feedback-visual-acertoerro)** | ![Diagrama 12](URL_DA_IMAGEM) |
+| **[13. Sorteio do número secreto](./docs/README.md#13-sorteio-do-número-secreto)** | ![Diagrama 13](URL_DA_IMAGEM) | **[14. Loop de adivinhação](./docs/README.md#14-loop-de-adivinhação)** | ![Diagrama 14](URL_DA_IMAGEM) | **[15. Validação da entrada](./docs/README.md#15-validação-da-entrada)** | ![Diagrama 15](URL_DA_IMAGEM) |
+| **[16. Feedback: "Muito baixo"](./docs/README.md#16-feedback-muito-baixo)** | ![Diagrama 16](URL_DA_IMAGEM) | **[17. Feedback: "Muito alto"](./docs/README.md#17-feedback-muito-alto)** | ![Diagrama 17](URL_DA_IMAGEM) | **[18. Feedback: "Acertou"](./docs/README.md#18-feedback-acertou)** | ![Diagrama 18](URL_DA_IMAGEM) |
 
 <div align="center">
   <h2>Decisões de Design (IHC)</h2>
