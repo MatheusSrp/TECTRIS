@@ -246,36 +246,19 @@ O layout foi organizado em **três áreas principais**:
 |  | Contador de tempo |  |
 
 <div align="center">
-  <h2>Fluxo de Interação</h2>
+  <h2>Diagramas UML das Funcionalidades</h2>
 </div>
 
-```mermaid
-flowchart TD
-    A([Início]) --> B[Iniciar partida]
-    B --> C[Inicializar estados dos jogadores]
-    C --> D[Iniciar queda dos blocos]
+Clique no titulo da funcionalidade para acessar o diagrama correspondente completo
 
-    D --> E[Exibir pergunta]
-    E --> F[Jogador seleciona resposta]
-    F --> G[Validar resposta]
-
-    G --> H{Resposta correta?}
-
-    H -->|Sim| I[Aplicar recompensa]
-    H -->|Não| J[Aplicar penalidade]
-
-    I --> K[Atualizar pontuação]
-    J --> K
-
-    K --> L[Exibir feedback visual]
-
-    L --> M{Pontuação >= 100?}
-
-    M -->|Não| D
-    M -->|Sim| N[Encerrar jogo]
-
-    N --> O([Fim])
-```
+| Funcionalidade | Diagrama | Funcionalidade | Diagrama | Funcionalidade | Diagrama |
+|---------------|----------|----------------|----------|----------------|----------|
+| **[1. Jogar partida local](./docs/README.md#1-jogar-partida-local)** | ![Diagrama 1](URL_DA_IMAGEM) | **2. Sistema de queda de blocos** | ![Diagrama 2](URL_DA_IMAGEM) | **3. Perguntas de lógica durante o jogo** | ![Diagrama 3](URL_DA_IMAGEM) |
+| **4. Sistema de pontuação** | ![Diagrama 4](URL_DA_IMAGEM) | **5. Penalidade por erro** | ![Diagrama 5](URL_DA_IMAGEM) | **6. Sistema de vitória** | ![Diagrama 6](URL_DA_IMAGEM) |
+| **7. Sistema de tempo nas perguntas** | ![Diagrama 7](URL_DA_IMAGEM) | **8. Efeito competitivo (impactar adversário)** | ![Diagrama 8](URL_DA_IMAGEM) | **9. Interface do jogo (UI básica)** | ![Diagrama 9](URL_DA_IMAGEM) |
+| **10. Banco de perguntas (fixo/local)** | ![Diagrama 10](URL_DA_IMAGEM) | **11. Aumento de dificuldade progressiva** | ![Diagrama 11](URL_DA_IMAGEM) | **12. Feedback visual (acerto/erro)** | ![Diagrama 12](URL_DA_IMAGEM) |
+| **13. Sorteio do número secreto** | ![Diagrama 13](URL_DA_IMAGEM) | **14. Loop de adivinhação** | ![Diagrama 14](URL_DA_IMAGEM) | **15. Validação da entrada** | ![Diagrama 15](URL_DA_IMAGEM) |
+| **16. Feedback: "Muito baixo"** | ![Diagrama 16](URL_DA_IMAGEM) | **17. Feedback: "Muito alto"** | ![Diagrama 17](URL_DA_IMAGEM) | **18. Feedback: "Acertou"** | ![Diagrama 18](URL_DA_IMAGEM) | 
 
 <div align="center">
   <h2>Decisões de Design (IHC)</h2>

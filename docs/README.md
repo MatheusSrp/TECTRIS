@@ -110,7 +110,7 @@ O --> P([Fim])
 ## 3. Validação da entrada
 
 ## 4. Feedback: “Muito baixo”
-
+ 
 ## 5. Feedback: “Muito alto”
 
 ## 6. Feedback: “Acertou”
