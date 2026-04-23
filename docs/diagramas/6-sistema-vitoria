@@ -1,0 +1,20 @@
+```mermaid
+flowchart TD
+
+A([Início]) --> B[Partida em andamento]
+
+B --> C[Atualizar pontuação dos jogadores]
+
+C --> D{P1 ou P2 atingiu 100 pontos?}
+
+D -->|Não| E[Continuar partida]
+E --> B
+
+D -->|Sim| F[Determinar vencedor]
+
+F --> G[Exibir vencedor na interface]
+
+G --> H[Encerrar partida]
+
+H --> I([Fim])
+```
