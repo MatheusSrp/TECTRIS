@@ -46,57 +46,46 @@ A utilização de diagramas UML é importante porque ajuda a organizar as ideias
 
 ## 1 . Jogar partida local
 
-```
-mermaid
-flowchart TD
+```mermaid
 
 ```
 
 ## 2. Sistema de queda de blocos
 
-```
-mermaid
-flowchart TD
+```mermaid
 
 ```
 
 ## 3. Perguntas de lógica durante o jogo
 
-```
-mermaid
-flowchart TD
+```mermaid
 
 ```
 
 ## 4. Sistema de pontuação
 
-```
-mermaid
-flowchart TD
+```mermaid
 
 ```
 
 ## 5. Penalidade por erro
 
-```
-mermaid
-flowchart TD
+```mermaid
+
 
 ```
 
 ## 6. Sistema de vitória
 
-```
-mermaid
-flowchart TD
+```mermaid
+
 
 ```
 
 ## 7. Sistema de tempo nas perguntas
 
-```
-mermaid
-flowchart TD
+```mermaid
+
 
 ```
 
