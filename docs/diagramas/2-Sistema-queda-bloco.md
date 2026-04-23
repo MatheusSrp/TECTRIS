@@ -1,31 +1,47 @@
 ```mermaid
-flowchart TD
+stateDiagram-v2
 
-A([Início]) --> B[Iniciar partida]
-B --> C[Gerar novo bloco]
-C --> D[Bloco cai automaticamente]
+[*] --> Iniciar_Partida
 
-D --> E{Mover esquerda/direita?}
-E -->|Sim| F[Atualizar posição]
-E -->|Não| G{Rotacionar bloco?}
+Iniciar_Partida --> Gerar_Bloco
 
-F --> G
+state Gerar_Bloco {
+    [*] --> Novo_Bloco
+}
 
-G -->|Sim| H[Atualizar rotação]
-G -->|Não| I[Verificar colisão]
+Gerar_Bloco --> Queda_Ativa
 
-H --> I
+state Queda_Ativa {
 
-I --> J{Colidiu?}
+    [*] --> Bloco_Caindo
 
-J -->|Não| K[Continuar queda do bloco]
-K --> D
+    Bloco_Caindo --> Movimento_Lateral : mover esquerda/direita
+    Movimento_Lateral --> Rotacao
 
-J -->|Sim| L[Fixar bloco no tabuleiro]
-L --> M{Linha completa?}
+    Bloco_Caindo --> Rotacao : sem movimento lateral
 
-M -->|Sim| N[Remover linha<br> e atualizar pontuação]
-N --> C
+    Rotacao --> Atualizar_Rotacao : rotacionar
+    Rotacao --> Verificar_Colisao : sem rotação
 
-M -->|Não| C
+    Atualizar_Rotacao --> Verificar_Colisao
+
+    Verificar_Colisao --> Bloco_Caindo : sem colisão
+    Verificar_Colisao --> Fixar_Bloco : colisão
+}
+
+Queda_Ativa --> Processar_Tabuleiro
+
+state Processar_Tabuleiro {
+
+    [*] --> Fixar_Bloco
+
+    Fixar_Bloco --> Verificar_Linha
+
+    Verificar_Linha --> Atualizar_Pontuacao : linha completa
+    Verificar_Linha --> Gerar_Bloco : nenhuma linha completa
+
+    Atualizar_Pontuacao --> Gerar_Bloco
+}
+
+Gerar_Bloco --> Queda_Ativa
 ```

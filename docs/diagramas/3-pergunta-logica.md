@@ -1,24 +1,35 @@
 ```mermaid
-flowchart TD
+stateDiagram-v2
 
-A([Início]) --> B[Partida em andamento]
+[*] --> Partida_Em_Andamento
 
-B --> C[Exibir pergunta]
+Partida_Em_Andamento --> Pergunta_Ativa
 
-C --> D[Jogador digita resposta]
+state Pergunta_Ativa {
 
-D --> E{Entrada válida?}
+    [*] --> Exibir_Pergunta
 
-E -->|Não| D
-E -->|Sim| F[Registrar resposta]
+    Exibir_Pergunta --> Receber_Resposta
 
-F --> G{Resposta correta?}
+    Receber_Resposta --> Receber_Resposta : entrada inválida
+    Receber_Resposta --> Registrar_Resposta : entrada válida
+}
 
-G -->|Sim| H[Aplicar benefício no jogo]
-G -->|Não| I[Aplicar penalidade no jogo]
+Pergunta_Ativa --> Avaliar_Resposta
 
-H --> J[Retornar à partida]
-I --> J
+state Avaliar_Resposta {
 
-J --> K([Fim])
+    [*] --> Verificar_Correcao
+
+    Verificar_Correcao --> Aplicar_Beneficio : resposta correta
+    Verificar_Correcao --> Aplicar_Penalidade : resposta incorreta
+}
+
+Avaliar_Resposta --> Retornar_Partida
+
+state Retornar_Partida {
+    [*] --> Continuar_Jogo
+}
+
+Retornar_Partida --> [*]
 ```

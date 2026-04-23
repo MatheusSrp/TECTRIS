@@ -1,21 +1,19 @@
 ```mermaid
-flowchart TD
+stateDiagram-v2
 
-A([Início]) --> B[Resposta incorreta registrada]
+[*] --> Resposta_Incorreta
 
-B --> C[Aplicar perda de pontos]
+Resposta_Incorreta --> Perda_Pontos
 
-C --> D{Penalidade adicional?}
+Perda_Pontos --> Bloco_Penalidade : penalidade adicional
+Perda_Pontos --> Fluxo_Normal : sem penalidade extra
 
-D -->|Sim| E[Adicionar bloco de penalidade]
-E --> F[Inserir blocos extras<br> ou aumentar dificuldade]
+Bloco_Penalidade --> Impacto_Jogo
+Impacto_Jogo --> Feedback
 
-D -->|Não| G[Manter fluxo normal]
+Fluxo_Normal --> Feedback
 
-F --> H[Exibir feedback ao jogador]
-G --> H
+Feedback --> Atualizar_Estado_Jogo
 
-H --> I[Atualizar estado do jogo]
-
-I --> J([Fim])
+Atualizar_Estado_Jogo --> [*]
 ```

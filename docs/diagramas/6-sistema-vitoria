@@ -1,20 +1,17 @@
 ```mermaid
-flowchart TD
+stateDiagram-v2
 
-A([Início]) --> B[Partida em andamento]
+[*] --> Partida_Em_Andamento
 
-B --> C[Atualizar pontuação dos jogadores]
+Partida_Em_Andamento --> Atualizar_Pontuacao
 
-C --> D{P1 ou P2 atingiu 100 pontos?}
+Atualizar_Pontuacao --> Partida_Em_Andamento : nenhum jogador com 100 pontos
 
-D -->|Não| E[Continuar partida]
-E --> B
+Atualizar_Pontuacao --> Determinar_Vencedor : P1 ou P2 >=100
 
-D -->|Sim| F[Determinar vencedor]
+Determinar_Vencedor --> Exibir_Vencedor
 
-F --> G[Exibir vencedor na interface]
+Exibir_Vencedor --> Encerrar_Partida
 
-G --> H[Encerrar partida]
-
-H --> I([Fim])
+Encerrar_Partida --> [*]
 ```

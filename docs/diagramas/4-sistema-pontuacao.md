@@ -1,19 +1,38 @@
 ```mermaid
-flowchart TD
+stateDiagram-v2
 
-A([Início]) --> B[Resposta correta registrada]
+[*] --> Resposta_Correta_Registrada
 
-B --> C{Dificuldade da pergunta}
+Resposta_Correta_Registrada --> Avaliar_Dificuldade
 
-C -->|Fácil| D[Adicionar pontuação básica]
-C -->|Média| E[Adicionar pontuação intermediária]
-C -->|Difícil| F[Adicionar pontuação avançada]
+state Avaliar_Dificuldade {
 
-D --> G[Atualizar pontuação do jogador]
-E --> G
-F --> G
+    [*] --> Verificar_Dificuldade
 
-G --> H[Exibir pontuação na interface]
+    Verificar_Dificuldade --> Pontuacao_Basica : fácil
+    Verificar_Dificuldade --> Pontuacao_Intermediaria : média
+    Verificar_Dificuldade --> Pontuacao_Avancada : difícil
+}
 
-H --> I([Fim])
+Avaliar_Dificuldade --> Atualizar_Pontos
+
+state Atualizar_Pontos {
+
+    [*] --> Pontuacao_Basica
+    Pontuacao_Basica --> Atualizar_Pontuacao
+
+    [*] --> Pontuacao_Intermediaria
+    Pontuacao_Intermediaria --> Atualizar_Pontuacao
+
+    [*] --> Pontuacao_Avancada
+    Pontuacao_Avancada --> Atualizar_Pontuacao
+}
+
+Atualizar_Pontos --> Exibir_Interface
+
+state Exibir_Interface {
+    [*] --> Mostrar_Pontuacao
+}
+
+Exibir_Interface --> [*]
 ```
