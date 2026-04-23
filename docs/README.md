@@ -47,39 +47,166 @@ A utilização de diagramas UML é importante porque ajuda a organizar as ideias
 ## 1 . Jogar partida local
 
 ```mermaid
+flowchart TD
 
+A([Início]) --> B[Iniciar partida]
+B --> C[Inicializar jogadores P1 e P2]
+C --> D[Iniciar queda dos blocos]
+
+D --> E[Exibir pergunta]
+
+E --> F[Jogadores tentam responder]
+
+F --> G{Quem respondeu primeiro?}
+
+G --> H[Capturar resposta do jogador]
+
+H --> I{Resposta correta?}
+
+I -->|Sim| J[Adicionar pontos ao jogador]
+I -->|Não| K[Aplicar penalidade]
+
+J --> L[Atualizar pontuação]
+K --> L
+
+L --> M[Exibir feedback visual]
+
+M --> N{Algum jogador >= 100?}
+
+N -->|Não| D
+N -->|Sim| O[Determinar vencedor]
+
+O --> P([Fim])
 ```
 
 ## 2. Sistema de queda de blocos
 
 ```mermaid
+flowchart TD
 
+A([Início]) --> B[Iniciar partida]
+B --> C[Gerar novo bloco]
+C --> D[Bloco cai automaticamente]
+
+D --> E{Mover esquerda/direita?}
+E -->|Sim| F[Atualizar posição]
+E -->|Não| G{Rotacionar bloco?}
+
+F --> G
+
+G -->|Sim| H[Atualizar rotação]
+G -->|Não| I[Verificar colisão]
+
+H --> I
+
+I --> J{Colidiu?}
+
+J -->|Não| K[Continuar queda do bloco]
+K --> D
+
+J -->|Sim| L[Fixar bloco no tabuleiro]
+L --> M{Linha completa?}
+
+M -->|Sim| N[Remover linha<br> e atualizar pontuação]
+N --> C
+
+M -->|Não| C
 ```
 
 ## 3. Perguntas de lógica durante o jogo
 
 ```mermaid
+flowchart TD
 
+A([Início]) --> B[Partida em andamento]
+
+B --> C[Exibir pergunta]
+
+C --> D[Jogador digita resposta]
+
+D --> E{Entrada válida?}
+
+E -->|Não| D
+E -->|Sim| F[Registrar resposta]
+
+F --> G{Resposta correta?}
+
+G -->|Sim| H[Aplicar benefício no jogo]
+G -->|Não| I[Aplicar penalidade no jogo]
+
+H --> J[Retornar à partida]
+I --> J
+
+J --> K([Fim])
 ```
 
 ## 4. Sistema de pontuação
 
 ```mermaid
+flowchart TD
 
+A([Início]) --> B[Resposta correta registrada]
+
+B --> C{Dificuldade da pergunta}
+
+C -->|Fácil| D[Adicionar pontuação básica]
+C -->|Média| E[Adicionar pontuação intermediária]
+C -->|Difícil| F[Adicionar pontuação avançada]
+
+D --> G[Atualizar pontuação do jogador]
+E --> G
+F --> G
+
+G --> H[Exibir pontuação na interface]
+
+H --> I([Fim])
 ```
 
 ## 5. Penalidade por erro
 
 ```mermaid
+flowchart TD
 
+A([Início]) --> B[Resposta incorreta registrada]
 
+B --> C[Aplicar perda de pontos]
+
+C --> D{Penalidade adicional?}
+
+D -->|Sim| E[Adicionar bloco de penalidade]
+E --> F[Inserir blocos extras<br> ou aumentar dificuldade]
+
+D -->|Não| G[Manter fluxo normal]
+
+F --> H[Exibir feedback ao jogador]
+G --> H
+
+H --> I[Atualizar estado do jogo]
+
+I --> J([Fim])
 ```
 
 ## 6. Sistema de vitória
 
 ```mermaid
+flowchart TD
 
+A([Início]) --> B[Partida em andamento]
 
+B --> C[Atualizar pontuação dos jogadores]
+
+C --> D{P1 ou P2 atingiu 100 pontos?}
+
+D -->|Não| E[Continuar partida]
+E --> B
+
+D -->|Sim| F[Determinar vencedor]
+
+F --> G[Exibir vencedor na interface]
+
+G --> H[Encerrar partida]
+
+H --> I([Fim])
 ```
 
 ## 7. Sistema de tempo nas perguntas
