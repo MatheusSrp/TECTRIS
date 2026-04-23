@@ -102,8 +102,7 @@ flowchart TD
 
 ## 8. Efeito competitivo (impactar adversário)
 
-```
-mermaid
+```mermaid
 flowchart TD
 stateDiagram-v2
     [*] --> AcaoJogador
@@ -149,8 +148,7 @@ stateDiagram-v2
 
 ## 9. Interface do jogo (UI básica)
 
-```
-mermaid
+```mermaid
 flowchart TD
 stateDiagram-v2
     [*] --> InicializarInterface
@@ -190,8 +188,7 @@ stateDiagram-v2
 
 ## 10. Banco de perguntas (fixo/local)
 
-```
-mermaid
+```mermaid
 flowchart TD
 stateDiagram-v2
     [*] --> InicializarSistema
@@ -246,8 +243,7 @@ stateDiagram-v2
 
 ## 11. Aumento de dificuldade progressiva
 
-```
-mermaid
+```mermaid
 flowchart TD
 stateDiagram-v2
     [*] --> IniciarJogo
@@ -292,8 +288,7 @@ stateDiagram-v2
 
 ## 12. Feedback visual (acerto/erro)
 
-```
-mermaid
+```mermaid
 flowchart TD
 stateDiagram-v2
     [*] --> AguardarResposta
@@ -335,8 +330,7 @@ stateDiagram-v2
 
 ## 1. Sorteio do número secreto
 
-```
-mermaid
+```mermaid
 flowchart TD
 stateDiagram-v2
     [*] --> IniciarRodada
@@ -373,8 +367,7 @@ stateDiagram-v2
 
 ## 2. Loop de adivinhação
 
-```
-mermaid
+```mermaid
 flowchart TD
 stateDiagram-v2
     [*] --> IniciarLoopAdivinhacao
@@ -424,8 +417,7 @@ stateDiagram-v2
 
 ## 3. Validação da entrada
 
-```
-mermaid
+```mermaid
 flowchart TD
 stateDiagram-v2
     [*] --> ReceberEntrada
@@ -466,8 +458,7 @@ stateDiagram-v2
 
 ## 4. Feedback: “Muito baixo”
 
-```
-mermaid
+```mermaid
 flowchart TD
 stateDiagram-v2
     [*] --> ReceberPalpite
@@ -502,8 +493,7 @@ stateDiagram-v2
 
 ## 5. Feedback: “Muito alto”
 
-```
-mermaid
+```mermaid  
 flowchart TD
 stateDiagram-v2
     [*] --> ReceberPalpite
@@ -538,8 +528,7 @@ stateDiagram-v2
 
 ## 6. Feedback: “Acertou”
 
-```
-mermaid
+```mermaid
 flowchart TD
 stateDiagram-v2
     [*] --> ReceberPalpite
